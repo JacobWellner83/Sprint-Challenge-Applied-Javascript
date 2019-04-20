@@ -51,6 +51,7 @@ We might convert a NodeList into an Array to take advantage of the many useful A
 
 Components are reusable structures composed of HTML, CSS and Javascript that are used throughout modern websites and applications.
 
+
 ### Git Set up
 
 * [x] Fork the project into your GitHub user account
