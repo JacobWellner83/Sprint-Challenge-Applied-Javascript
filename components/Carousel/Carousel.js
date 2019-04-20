@@ -9,12 +9,10 @@ class Carousel {
             .addEventListener('click', () => this.slide('left'));
         this.element.querySelector('.right-button')
         .addEventListener('click', () => this.slide('right'));
-
-        console.log(this);
     }
 
-    slide = (dir) => {
-        console.log(dir)
+    slide = () => {
+        
     }
 }
 
