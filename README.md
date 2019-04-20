@@ -33,20 +33,30 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. What is the DOM?
 
+The Document Object Model is a tree-like representation of the HTML elements on a webpage. The browser uses the HTML as a blueprint to build the DOM of what is represented as the webpage.
+
 2. What is an event?
+
+Events are user interactions which we use EventListeners to build responses for. Events include the vast majority of user inputs including keyboard and mouse inputs.
 
 3. What is an event listener?
 
+EventListeners respond to an event by executing a callback function which is referenced within them.
+
 4. Why would we convert a NodeList into an Array?
+
+We might convert a NodeList into an Array to take advantage of the many useful Array methods that a NodeList does not have.
 
 5. What is a component?
 
+Components are reusable structures composed of HTML, CSS and Javascript that are used throughout modern websites and applications.
+
 ### Git Set up
 
-* [ ] Fork the project into your GitHub user account
-* [ ] Clone the forked project into a directory on your machine
-* [ ] Create a pull request before you start working on the project requirements.  You will continuously push your updates throughout the project.
-* [ ] You are now ready to build this project with your preferred IDE
+* [x] Fork the project into your GitHub user account
+* [x] Clone the forked project into a directory on your machine
+* [x] Create a pull request before you start working on the project requirements.  You will continuously push your updates throughout the project.
+* [Yeah! ] You are now ready to build this project with your preferred IDE
 
 ## Minimum Viable Product
 
