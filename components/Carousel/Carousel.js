@@ -1,19 +1,5 @@
 class Carousel {
-    constructor (element) {
-        this.element = element;
 
-        this.slides = this.element.querySelectorAll('img');
-        this.currSlide = 0;
-
-        this.element.querySelector('.left-button')
-            .addEventListener('click', () => this.slide('left'));
-        this.element.querySelector('.right-button')
-        .addEventListener('click', () => this.slide('right'));
-    }
-
-    slide = () => {
-        
-    }
 }
 
 let carousel = new Carousel(document.querySelector('.carousel'));
