@@ -1,19 +1,19 @@
 class Carousel {
-
-    constructor (element) {
+    
+    constructor(element) {
         this.element = element;
-        this.image = [ ...document.querySelectorAll('.carousel img')]
+        this.images = [...document.querySelectorAll('.carousel img')]
             .map(img => new CarouselImage(img));
         this.buttons = [...document.querySelectorAll('[class$="button"]')]
             .map(button => new CarouselButton(button));
         this.current = 0;
-
+ 
         this.images[this.current].show();
-        this.setEventHandlers();
-        this.timer = this.sliderAuto();
+        this.registerEventHandlers();
+        this.timer = this.autoSlide();
     }
-
-    setEventHandlers() {
+ 
+    registerEventHandlers() {
         this.buttons.forEach(button => {
             button.element.addEventListener('click', (event) => {
                 this.slideImage(button.direction);
@@ -22,7 +22,7 @@ class Carousel {
  
         this.element.addEventListener('mouseenter', event => clearInterval(this.timer));
         this.element.addEventListener('mouseleave', event => {
-            this.timer = this.sliderAuto()
+            this.timer = this.autoSlide()
         });
     }
  
@@ -39,15 +39,15 @@ class Carousel {
         this.current = next;
     }
  
-    sliderAuto() {
+    autoSlide() {
         return setInterval(() => {
             this.slideImage('left');
-        }, 2200)
+        }, 2500)
     }
  }
-
-class CarouselImage {
-    
+ 
+ class CarouselImage {
+ 
     constructor(img) {
         this.img = img;
     }
@@ -59,10 +59,10 @@ class CarouselImage {
     hide() {
         this.img.style.display = 'none';
     }
-}
-
-class CarouselButton {
+ }
  
+ class CarouselButton {
+    
     constructor (element) {
         this.element = element;
         this.direction = this.getButtonDirection()
@@ -71,9 +71,10 @@ class CarouselButton {
     getButtonDirection() {
         return this.element.className.split('-')[0];
     }
-}
+ }
+ 
+ let carousel = new Carousel(document.querySelector('.carousel'));
 
-let carousel = new Carousel(document.querySelector('.carousel'));
 
 /* If You've gotten this far, you're on your own! Although we will give you some hints:
     1. You will need to grab a reference to the carousel, and in it grab the left and right buttons
