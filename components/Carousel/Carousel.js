@@ -47,7 +47,17 @@ class Carousel {
  }
 
 class CarouselImage {
-
+    constructor(img) {
+        this.img = img;
+    }
+ 
+    show() {
+        this.img.style.display = 'inline-block';
+    }
+ 
+    hide() {
+        this.img.style.display = 'none';
+    }
 }
 
 class CarouselButton {
