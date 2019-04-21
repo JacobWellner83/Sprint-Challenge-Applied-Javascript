@@ -1,5 +1,25 @@
 class Carousel {
 
+    constructor (element) {
+        this.element = element;
+        this.image = [ ...document.querySelectorAll('.carousel img')]
+            .map(img => new CarouselImage(img));
+        this.buttons = [...document.querySelectorAll('[class$="button"]')]
+            .map(button => new CarouselButton(button));
+        this.current = 0;
+
+        this.images[this.current].show();
+        this.setEventHandlers();
+        this.timer = this.sliderAuto();
+    }
+}
+
+class CarouselImage {
+
+}
+
+class CarouselButton {
+
 }
 
 let carousel = new Carousel(document.querySelector('.carousel'));
