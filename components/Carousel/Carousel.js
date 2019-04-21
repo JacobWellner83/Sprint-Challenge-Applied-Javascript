@@ -47,6 +47,7 @@ class Carousel {
  }
 
 class CarouselImage {
+    
     constructor(img) {
         this.img = img;
     }
@@ -61,7 +62,15 @@ class CarouselImage {
 }
 
 class CarouselButton {
-
+ 
+    constructor (element) {
+        this.element = element;
+        this.direction = this.getButtonDirection()
+    }
+ 
+    getButtonDirection() {
+        return this.element.className.split('-')[0];
+    }
 }
 
 let carousel = new Carousel(document.querySelector('.carousel'));
